@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityAgregarReunion"
+    android:background="@drawable/costanera">
+
+    <EditText
+        android:id="@+id/nombreReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/nombre_reunion"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="83dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/descripcionReunion" />
+
+    <EditText
+        android:id="@+id/descripcionReunion"
+        android:layout_width="218dp"
+        android:layout_height="82dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/descripcion"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="146dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreReunion"
+        app:layout_constraintBottom_toTopOf="@+id/lugarReunion" />
+
+    <EditText
+        android:id="@+id/lugarReunion"
+        android:layout_width="218dp"
+        android:layout_height="82dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:hint="@string/lugar_de_la_reuni_n"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="146dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionReunion"
+        app:layout_constraintBottom_toTopOf="@+id/fechaHoraInicioReunion" />
+
+    <EditText
+        android:id="@+id/fechaHoraInicioReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/inicio"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="266dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionReunion"
+        app:layout_constraintBottom_toTopOf="@+id/fechaHoraFinReunion" />
+
+    <EditText
+        android:id="@+id/fechaHoraFinReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="@string/fin"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="332dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaHoraInicioReunion"
+        app:layout_constraintBottom_toTopOf="@+id/botonAgregarReunion2" />
+
+    <Button
+        android:id="@+id/botonAgregarReunion2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/agregar"
+        android:onClick="AgregarReunion"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaHoraFinReunion"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Helper</string>
+    <string name="nombre_proyecto">NOMBRE PROYECTO</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="trabajo">Trabajo</string>
+    <string name="estudio">Estudio</string>
+    <string name="perfil">Perfil</string>
+    <string name="descripcion">DESCRIPCION</string>
+    <string name="inicio">INICIO</string>
+    <string name="fin">FIN</string>
+    <string name="TextView">Selecciona un nombre</string>
+    <string name="proyectos">Proyectos</string>
+    <string name="tareas">Tareas</string>
+    <string name="reuniones">Reuniones</string>
+    <string name="lugar_de_la_reuni_n">LUGAR DE LA REUNIÓN</string>
+    <string name="nombre_tarea">NOMBRE TAREA</string>
+    <string name="nombre_reunion">NOMBRE REUNION</string>
+</resources>
