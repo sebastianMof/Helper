@@ -49,7 +49,7 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
 
         listaTitulo = new ArrayList<String>();
 
-        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM TAREA",null);
+        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM TAREA WHERE nombre = ?",new String[] {dato});
 
         while(filatit.moveToNext()){
             listaTitulo.add(filatit.getString(0));
