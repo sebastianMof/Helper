@@ -49,7 +49,7 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
 
         listaTitulo = new ArrayList<String>();
 
-        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM TAREA WHERE nombre = ?",new String[] {dato});
+        Cursor filatit = BaseDeDatos.rawQuery("SELECT TAREA.nombre FROM TAREA INNER JOIN PROYECTO ON PROYECTO.id = TAREA.id_proyecto WHERE PROYECTO.nombre = ? ",new String[]{dato});
 
         while(filatit.moveToNext()){
             listaTitulo.add(filatit.getString(0));
@@ -73,14 +73,14 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
         });
     }
 
-    private void configureButtonVolverADespliegueProyecto(String name) {
+    private void configureButtonVolverADespliegueProyecto(final String dato) {
         Button nextButton = (Button)findViewById(R.id.botonVolverADespliegueProyecto);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueProyecto.class);
-                //i.putExtra("dato", name);
+                i.putExtra("dato", dato);
                 startActivity(i);
             }
         });
