@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 
-public class ActivityProyecto extends AppCompatActivity {
+public class ActivityTareasFiltradas extends AppCompatActivity {
 
     ListView et_listViewEve;
     ArrayList<String> listaTitulo;
@@ -25,45 +25,36 @@ public class ActivityProyecto extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proyecto);
+        setContentView(R.layout.activity_tareas_filtradas);
 
-        et_listViewEve = (ListView)findViewById(R.id.listViewProyectos);
+        et_listViewEve = (ListView)findViewById(R.id.listViewTareasFiltradas);
 
-        consultarLista();
+        String dato = getIntent().getStringExtra("dato");
 
-        configureNextButtonAgregarProyectos();
+        consultarLista(dato);
 
         ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_list_item_2,android.R.id.text1,listaTitulo);
         et_listViewEve.setAdapter(adaptador);
 
         configureListViewClick(et_listViewEve);
 
+        configureButtonVolverADespliegueProyecto(dato);
+
     }
 
-    private void consultarLista() {
+    private void consultarLista(String dato) {
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
         listaTitulo = new ArrayList<String>();
 
-        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM PROYECTO ",null);
+        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM TAREA",null);
 
         while(filatit.moveToNext()){
             listaTitulo.add(filatit.getString(0));
         }
 
-    }
-
-    private void configureNextButtonAgregarProyectos() {
-        Button nextButton = (Button)findViewById(R.id.botonIrAAgregarProyecto);
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ActivityProyecto.this, ActivityAgregarProyecto.class));
-            }
-        });
     }
 
     private void configureListViewClick(final ListView et_listViewEve) {
@@ -74,12 +65,24 @@ public class ActivityProyecto extends AppCompatActivity {
                 Object item = et_listViewEve.getItemAtPosition(position);
                 String name = item.toString();
 
-                Intent i = new Intent(ActivityProyecto.this, ActivityDespliegueProyecto.class);
+                Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueTarea.class);
+                i.putExtra("dato", name);
+                startActivity(i);
+
+            }
+        });
+    }
+
+    private void configureButtonVolverADespliegueProyecto(String name) {
+        Button nextButton = (Button)findViewById(R.id.botonVolverADespliegueProyecto);
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueProyecto.class);
                 i.putExtra("dato", name);
                 startActivity(i);
             }
         });
-
-
     }
 }

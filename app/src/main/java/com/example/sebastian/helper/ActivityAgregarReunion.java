@@ -1,6 +1,7 @@
 package com.example.sebastian.helper;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,23 +38,31 @@ public class ActivityAgregarReunion extends AppCompatActivity {
         String fecha_hora_inicioNew = et_fecha_hora_inicio.getText().toString();
         String fecha_hora_finNew = et_fecha_hora_fin.getText().toString();
 
-        ContentValues registro = new ContentValues();
-        registro.put("nombre", nombreNew);
-        registro.put("descripcion", descripcionNew);
-        registro.put("lugar", lugarNew);
-        registro.put("fecha_hora_inicio", fecha_hora_inicioNew);
-        registro.put("fecha_hora_fin", fecha_hora_finNew);
 
-        BaseDeDatos.insert("REUNION", null, registro);
-        BaseDeDatos.close();
+        if(!nombreNew.isEmpty()) {
+            ContentValues registro = new ContentValues();
+            registro.put("nombre", nombreNew);
+            registro.put("descripcion", descripcionNew);
+            registro.put("lugar", lugarNew);
+            registro.put("fecha_hora_inicio", fecha_hora_inicioNew);
+            registro.put("fecha_hora_fin", fecha_hora_finNew);
 
-        et_nombre.setText("");
-        et_descripcion.setText("");
-        et_lugar.setText("");
-        et_fecha_hora_inicio.setText("");
-        et_fecha_hora_fin.setText("");
+            BaseDeDatos.insert("REUNION", null, registro);
+            BaseDeDatos.close();
 
-        Toast.makeText(this, "Agregada.", Toast.LENGTH_LONG).show();
+            et_nombre.setText("");
+            et_descripcion.setText("");
+            et_lugar.setText("");
+            et_fecha_hora_inicio.setText("");
+            et_fecha_hora_fin.setText("");
+
+            Toast.makeText(this, "Agregada.", Toast.LENGTH_LONG).show();
+
+            Intent anterior = new Intent(this, ActivityReunion.class);
+            startActivity(anterior);
+        }else {
+            Toast.makeText(this, "Error al agregar.", Toast.LENGTH_LONG).show();
+        }
 
     }
 

@@ -22,7 +22,12 @@
         <activity android:name=".ActivityReunion" />
         <activity android:name=".ActivityAgregarReunion" />
         <activity android:name=".ActivityAgregarProyecto" />
-        <activity android:name=".ActivityAgregarTarea"></activity>
+        <activity android:name=".ActivityAgregarTarea" />
+        <activity android:name=".ActivityDespliegueProyecto" />
+        <activity android:name=".ActivityDespliegueTarea" />
+        <activity android:name=".ActivityDespliegueReunion" />
+        <activity android:name=".ActivityReunionesFiltradas" />
+        <activity android:name=".ActivityTareasFiltradas"></activity>
     </application>
 
 </manifest>

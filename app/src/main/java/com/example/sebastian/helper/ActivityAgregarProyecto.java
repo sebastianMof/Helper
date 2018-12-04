@@ -1,6 +1,7 @@
 package com.example.sebastian.helper;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class ActivityAgregarProyecto extends AppCompatActivity {
         String fecha_inicioNew = et_fecha_inicio.getText().toString();
         String fecha_finNew = et_fecha_fin.getText().toString();
 
+
         ContentValues registro = new ContentValues();
         registro.put("nombre", nombreNew);
         registro.put("descripcion", descripcionNew);
@@ -51,6 +53,8 @@ public class ActivityAgregarProyecto extends AppCompatActivity {
 
         Toast.makeText(this, "Agregado.", Toast.LENGTH_LONG).show();
 
+        Intent anterior = new Intent(this, ActivityProyecto.class);
+        startActivity(anterior);
     }
 
 
