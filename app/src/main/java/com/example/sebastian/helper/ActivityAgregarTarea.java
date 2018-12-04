@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class ActivityAgregarTarea extends AppCompatActivity {
 
-    private EditText et_nombre, et_descripcion, et_fecha_inicio, et_fecha_fin;
+    private EditText et_nombre, et_descripcion, et_fecha_inicio, et_fecha_fin, et_id_proyecto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class ActivityAgregarTarea extends AppCompatActivity {
         et_descripcion = (EditText)findViewById(R.id.descripcionTarea);
         et_fecha_inicio = (EditText)findViewById(R.id.fechaInicioTarea);
         et_fecha_fin = (EditText)findViewById(R.id.fechaFinTarea);
+        et_id_proyecto = (EditText)findViewById(R.id.idProyectoTarea);
 
     }
 
@@ -35,12 +36,14 @@ public class ActivityAgregarTarea extends AppCompatActivity {
         String descripcionNew = et_descripcion.getText().toString();
         String fecha_inicioNew = et_fecha_inicio.getText().toString();
         String fecha_finNew = et_fecha_fin.getText().toString();
+        String id_proyectoNew = et_id_proyecto.getText().toString();
 
         ContentValues registro = new ContentValues();
         registro.put("nombre", nombreNew);
         registro.put("descripcion", descripcionNew);
         registro.put("fecha_inicio", fecha_inicioNew);
         registro.put("fecha_fin", fecha_finNew);
+        registro.put("id_proyecto", id_proyectoNew);
 
         BaseDeDatos.insert("TAREA", null, registro);
         BaseDeDatos.close();
@@ -49,6 +52,7 @@ public class ActivityAgregarTarea extends AppCompatActivity {
         et_descripcion.setText("");
         et_fecha_inicio.setText("");
         et_fecha_fin.setText("");
+        et_id_proyecto.setText("");
 
         Toast.makeText(this, "Agregada.", Toast.LENGTH_LONG).show();
 

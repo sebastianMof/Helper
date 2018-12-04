@@ -18,6 +18,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
     private TextView tv2;
     private TextView tv3;
     private TextView tv4;
+    private TextView tv5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
         tv2 = (TextView)findViewById(R.id.despliegueProyectoDescripcion);
         tv3 = (TextView)findViewById(R.id.despliegueProyectoFecha1);
         tv4 = (TextView)findViewById(R.id.despliegueProyectoFecha2);
+        tv5 = (TextView)findViewById(R.id.despliegueProyectoID);
 
         String dato = getIntent().getStringExtra("dato");
         consultarProyecto(dato);
@@ -50,6 +52,8 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
             tv2.setText("Descripcion del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("descripcion")));
             tv3.setText("Fecha inicio del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("fecha_inicio")));
             tv4.setText("Fecha fin del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("fecha_fin")));
+            tv5.setText("ID Proyecto: " + miQuery.getString(miQuery.getColumnIndex("id")));
+
         }
      }
 

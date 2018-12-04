@@ -80,7 +80,7 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueProyecto.class);
-                i.putExtra("dato", name);
+                //i.putExtra("dato", name);
                 startActivity(i);
             }
         });

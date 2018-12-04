@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityAgregarReunion"
-    android:background="@drawable/costanera">
+    android:background="@drawable/edificio">
 
     <EditText
         android:id="@+id/nombreReunion"
@@ -90,6 +90,23 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fechaHoraInicioReunion"
+        app:layout_constraintBottom_toTopOf="@+id/botonAgregarReunion2" />
+
+    <EditText
+        android:id="@+id/idProyectoReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="ID del proyecto"
+        android:textColorHint="@color/colorAccent"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@color/colorAccent"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="332dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fechaHoraFinReunion"
         app:layout_constraintBottom_toTopOf="@+id/botonAgregarReunion2" />
 
     <Button

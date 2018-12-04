@@ -53,6 +53,8 @@ public class ActivityProyecto extends AppCompatActivity {
             listaTitulo.add(filatit.getString(0));
         }
 
+
+
     }
 
     private void configureNextButtonAgregarProyectos() {

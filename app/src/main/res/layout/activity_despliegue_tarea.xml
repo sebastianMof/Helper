@@ -4,6 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityDespliegueTarea">
+    tools:context=".ActivityDespliegueTarea"
+    android:background="@drawable/edificio">
+
+    <TextView
+        android:id="@+id/despliegueTareaNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="83dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueTareaDescripcion"/>
+
+    <TextView
+        android:id="@+id/despliegueTareaDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueTareaNombre"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueTareaFecha1"/>
+
+    <TextView
+        android:id="@+id/despliegueTareaFecha1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueTareaDescripcion"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueTareaFecha2" />
+
+    <TextView
+        android:id="@+id/despliegueTareaFecha2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueReunionFecha1"
+        app:layout_constraintBottom_toTopOf="@+id/botonRegresarAProyecto3" />
+
+    <Button
+        android:id="@+id/botonRegresarAProyecto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Regresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

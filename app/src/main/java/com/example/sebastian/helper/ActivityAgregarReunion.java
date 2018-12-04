@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class ActivityAgregarReunion extends AppCompatActivity {
 
-    private EditText et_nombre, et_descripcion, et_lugar ,et_fecha_hora_inicio, et_fecha_hora_fin;
+    private EditText et_nombre, et_descripcion, et_lugar ,et_fecha_hora_inicio, et_fecha_hora_fin, et_id_proyecto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class ActivityAgregarReunion extends AppCompatActivity {
         et_lugar = (EditText)findViewById(R.id.lugarReunion);
         et_fecha_hora_fin = (EditText)findViewById(R.id.fechaHoraInicioReunion);
         et_fecha_hora_inicio = (EditText)findViewById(R.id.fechaHoraFinReunion);
+        et_id_proyecto = (EditText)findViewById(R.id.idProyectoReunion);
 
     }
 
@@ -37,6 +38,8 @@ public class ActivityAgregarReunion extends AppCompatActivity {
         String lugarNew = et_lugar.getText().toString();
         String fecha_hora_inicioNew = et_fecha_hora_inicio.getText().toString();
         String fecha_hora_finNew = et_fecha_hora_fin.getText().toString();
+        String id_proyectoNew = et_id_proyecto.getText().toString();
+
 
 
         if(!nombreNew.isEmpty()) {
@@ -46,6 +49,7 @@ public class ActivityAgregarReunion extends AppCompatActivity {
             registro.put("lugar", lugarNew);
             registro.put("fecha_hora_inicio", fecha_hora_inicioNew);
             registro.put("fecha_hora_fin", fecha_hora_finNew);
+            registro.put("id_proyecto", id_proyectoNew);
 
             BaseDeDatos.insert("REUNION", null, registro);
             BaseDeDatos.close();
@@ -55,6 +59,7 @@ public class ActivityAgregarReunion extends AppCompatActivity {
             et_lugar.setText("");
             et_fecha_hora_inicio.setText("");
             et_fecha_hora_fin.setText("");
+            et_id_proyecto.setText("");
 
             Toast.makeText(this, "Agregada.", Toast.LENGTH_LONG).show();
 

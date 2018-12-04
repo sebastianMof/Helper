@@ -4,6 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityDespliegueReunion">
+    tools:context=".ActivityDespliegueReunion"
+    android:background="@drawable/edificio">
+
+    <TextView
+        android:id="@+id/despliegueReunionNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="83dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueReunionDescripcion"/>
+
+    <TextView
+        android:id="@+id/despliegueReunionDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueReunionNombre"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueLugarReunion"/>
+
+    <TextView
+        android:id="@+id/despliegueLugarReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueLugarReunion"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueReunionFecha1"/>
+
+
+    <TextView
+        android:id="@+id/despliegueReunionFecha1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueLugarReunion"
+        app:layout_constraintBottom_toTopOf="@+id/despliegueReunionFecha2" />
+
+    <TextView
+        android:id="@+id/despliegueReunionFecha2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueReunionFecha1"
+        app:layout_constraintBottom_toTopOf="@+id/botonRegresarAProyecto2" />
+
+    <Button
+        android:id="@+id/botonRegresarAProyecto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:text="Regresar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/despliegueReunionFecha2"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </android.support.constraint.ConstraintLayout>
