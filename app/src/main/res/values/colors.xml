@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#5d5d60</color>
     <color name="colorAccent">#1174a9</color>
     <color name="colorListView">#1174a9</color>
+
+    <color name="color1">#58c8ff</color>
+    <color name="color2">#a2eaec</color>
+    <color name="color3">#a35cff</color>
+    <color name="color4">#2e4ea7</color>
+    <color name="color5">#6ce768</color>
+    <color name="Blanco">#ffffff</color>
+    <color name="Negro">#000000</color>
 </resources>

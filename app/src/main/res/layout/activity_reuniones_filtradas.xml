@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="VOLVER"
-        android:backgroundTint="@color/colorAccent"
+        android:backgroundTint="@color/color5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/listViewReunionesFiltradas"
