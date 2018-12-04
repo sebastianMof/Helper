@@ -32,16 +32,15 @@ public class ActivityDespliegueReunion extends AppCompatActivity {
 
         tv1 = (TextView)findViewById(R.id.despliegueReunionNombre);
         tv2 = (TextView)findViewById(R.id.despliegueReunionDescripcion);
-        tv3 = (TextView)findViewById(R.id.despliegueReunionFecha1);
-        tv4 = (TextView)findViewById(R.id.despliegueReunionFecha2);
-        tv5 = (TextView)findViewById(R.id.despliegueLugarReunion);
+        tv3 = (TextView)findViewById(R.id.despliegueLugarReunion);
+        tv4 = (TextView)findViewById(R.id.despliegueReunionFecha1);
+        tv5 = (TextView)findViewById(R.id.despliegueReunionFecha2);
+
 
         String dato = getIntent().getStringExtra("dato");
         consultarReunion(dato);
 
         configureButtonVolverAAgregarProyectos();
-        configureButtonIrAReunionesFiltradas(dato);
-        configureButtonIrATareasFiltradas(dato);
     }
 
     private void consultarReunion(String dato) {
@@ -49,57 +48,32 @@ public class ActivityDespliegueReunion extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
-        Cursor miQuery = BaseDeDatos.rawQuery("SELECT lugar , nombre, descripcion, fecha_inicio, fecha_fin FROM REUNION WHERE nombre = ?",new String[] {dato});
+        Cursor miQuery = BaseDeDatos.rawQuery("SELECT lugar , nombre, descripcion, fecha_hora_inicio, fecha_hora_fin FROM REUNION WHERE nombre = ?",new String[] {dato});
 
         if (miQuery.moveToFirst()) {
 
-            tv1.setText("Nombre del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("nombre")));
-            tv2.setText("Descripcion del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("descripcion")));
-            tv3.setText("Fecha inicio del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("fecha_inicio")));
-            tv4.setText("Fecha fin del Proyecto: " + miQuery.getString(miQuery.getColumnIndex("fecha_fin")));
-            tv5.setText("ID Proyecto: " + miQuery.getString(miQuery.getColumnIndex("id")));
+            tv1.setText("Nombre de la reunión: " + miQuery.getString(miQuery.getColumnIndex("nombre")));
+            tv2.setText("Descripcion: " + miQuery.getString(miQuery.getColumnIndex("descripcion")));
+            tv3.setText("Lugar: " + miQuery.getString(miQuery.getColumnIndex("lugar")));
+            tv4.setText("Inicio: " + miQuery.getString(miQuery.getColumnIndex("fecha_hora_inicio")));
+            tv5.setText("Fin: " + miQuery.getString(miQuery.getColumnIndex("fecha_hora_fin")));
+
 
         }
     }
 
     private void configureButtonVolverAAgregarProyectos() {
-        Button nextButton = (Button)findViewById(R.id.botonRegresarAProyecto);
+        Button nextButton = (Button)findViewById(R.id.botonRegresarAProyecto2);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityDespliegueProyecto.this, ActivityProyecto.class));
-            }
-        });
-    }
-
-
-    private void configureButtonIrATareasFiltradas(final String dato) {
-        Button nextButton = (Button)findViewById(R.id.irATareasFiltradas);
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ActivityDespliegueProyecto.this, ActivityTareasFiltradas.class);
-                i.putExtra("dato", dato);
+                Intent i = new Intent(ActivityDespliegueReunion.this, ActivityProyecto.class);
                 startActivity(i);
-
             }
         });
     }
 
-    private void configureButtonIrAReunionesFiltradas(final String dato) {
-        Button nextButton = (Button)findViewById(R.id.irAReunionesFiltradas);
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(ActivityDespliegueProyecto.this, ActivityReunionesFiltradas.class);
-                i.putExtra("dato", dato);
-                startActivity(i);
-
-            }
-        });
-    }
 
 }
