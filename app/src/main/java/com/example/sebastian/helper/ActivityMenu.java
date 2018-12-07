@@ -14,6 +14,8 @@ public class ActivityMenu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         configureNextButtonTrabajos();
+        configureNextButtonEstudios();
+        configureNextButtonPerfil();
 
     }
     private void configureNextButtonTrabajos() {
@@ -23,6 +25,26 @@ public class ActivityMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityMenu.this, ActivityTrabajo.class));
+            }
+        });
+    }
+    private void configureNextButtonEstudios() {
+        Button nextButton = (Button)findViewById(R.id.buttonestudio);
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityMenu.this, ActivityEstudio.class));
+            }
+        });
+    }
+    private void configureNextButtonPerfil() {
+        Button nextButton = (Button)findViewById(R.id.buttonperfil);
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityMenu.this, Perfilis.class));
             }
         });
     }

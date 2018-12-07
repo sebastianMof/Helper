@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityHorario"
+    android:screenOrientation="landscape"
+    android:background="@drawable/universidad1">
+
+    <EditText
+        android:id="@+id/txt_vif"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_vif"
+        app:layout_constraintStart_toEndOf="@+id/txt_juf"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vie" />
+
+    <EditText
+        android:id="@+id/txt_vie"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_vie"
+        app:layout_constraintStart_toEndOf="@+id/txt_jue"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vid" />
+
+    <EditText
+        android:id="@+id/txt_vid"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_vid"
+        app:layout_constraintStart_toEndOf="@+id/txt_jud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vic" />
+
+    <EditText
+        android:id="@+id/txt_vic"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_vic"
+        app:layout_constraintStart_toEndOf="@+id/txt_juc"
+        app:layout_constraintTop_toBottomOf="@+id/txt_vib" />
+
+    <EditText
+        android:id="@+id/txt_vib"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_vib"
+        app:layout_constraintStart_toEndOf="@+id/txt_jub"
+        app:layout_constraintTop_toBottomOf="@+id/txt_via" />
+
+    <EditText
+        android:id="@+id/txt_via"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_via"
+        app:layout_constraintStart_toEndOf="@+id/txt_jua"
+        app:layout_constraintTop_toBottomOf="@+id/dia7" />
+
+    <EditText
+        android:id="@+id/txt_juf"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_juf"
+        app:layout_constraintStart_toEndOf="@+id/txt_mif"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jue" />
+
+    <EditText
+        android:id="@+id/txt_jub"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_jub"
+        app:layout_constraintStart_toEndOf="@+id/txt_mib"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jua" />
+
+    <EditText
+        android:id="@+id/txt_juc"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_juc"
+        app:layout_constraintStart_toEndOf="@+id/txt_mic"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jub" />
+
+    <EditText
+        android:id="@+id/txt_jua"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_jua"
+        app:layout_constraintStart_toEndOf="@+id/txt_mia"
+        app:layout_constraintTop_toBottomOf="@+id/dia6" />
+
+    <EditText
+        android:id="@+id/txt_mif"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mif"
+        app:layout_constraintStart_toEndOf="@+id/txt_maf"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mie" />
+
+    <EditText
+        android:id="@+id/txt_mie"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mie"
+        app:layout_constraintStart_toEndOf="@+id/txt_mae"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mid" />
+
+    <EditText
+        android:id="@+id/txt_mia"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mia"
+        app:layout_constraintStart_toEndOf="@+id/txt_maa"
+        app:layout_constraintTop_toBottomOf="@+id/dia8" />
+
+    <EditText
+        android:id="@+id/txt_mib"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mib"
+        app:layout_constraintStart_toEndOf="@+id/txt_mab"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mia" />
+
+    <EditText
+        android:id="@+id/txt_mic"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mic"
+        app:layout_constraintStart_toEndOf="@+id/txt_mac"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mib" />
+
+    <EditText
+        android:id="@+id/txt_mid"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mid"
+        app:layout_constraintStart_toEndOf="@+id/txt_mad"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mic" />
+
+    <EditText
+        android:id="@+id/txt_maf"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_maf"
+        app:layout_constraintStart_toEndOf="@+id/txt_luf"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mae" />
+
+    <EditText
+        android:id="@+id/txt_mae"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mae"
+        app:layout_constraintStart_toEndOf="@+id/txt_lue"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mad" />
+
+    <EditText
+        android:id="@+id/txt_mad"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mad"
+        app:layout_constraintStart_toEndOf="@+id/txt_lud"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mac" />
+
+    <EditText
+        android:id="@+id/txt_mac"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mac"
+        app:layout_constraintStart_toEndOf="@+id/txt_luc"
+        app:layout_constraintTop_toBottomOf="@+id/txt_mab" />
+
+    <EditText
+        android:id="@+id/txt_mab"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_mab"
+        app:layout_constraintStart_toEndOf="@+id/txt_lub"
+        app:layout_constraintTop_toBottomOf="@+id/txt_maa" />
+
+    <EditText
+        android:id="@+id/txt_maa"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_maa"
+        app:layout_constraintStart_toEndOf="@+id/txt_lua"
+        app:layout_constraintTop_toBottomOf="@+id/dia10" />
+
+    <EditText
+        android:id="@+id/txt_luf"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_luf"
+        app:layout_constraintStart_toEndOf="@+id/f"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lue" />
+
+    <EditText
+        android:id="@+id/txt_lue"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_lue"
+        app:layout_constraintStart_toEndOf="@+id/e"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lud" />
+
+    <EditText
+        android:id="@+id/txt_lud"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_lud"
+        app:layout_constraintStart_toEndOf="@+id/d"
+        app:layout_constraintTop_toBottomOf="@+id/txt_luc" />
+
+    <EditText
+        android:id="@+id/txt_luc"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_luc"
+        app:layout_constraintStart_toEndOf="@+id/c"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lub" />
+
+    <EditText
+        android:id="@+id/txt_lub"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_lub"
+        app:layout_constraintStart_toEndOf="@+id/b"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lua" />
+
+    <TextView
+        android:id="@+id/a6"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="42dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/f"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/e" />
+
+    <TextView
+        android:id="@+id/e"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="E"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d" />
+
+    <TextView
+        android:id="@+id/d"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/c" />
+
+    <TextView
+        android:id="@+id/c"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b" />
+
+    <TextView
+        android:id="@+id/dia6"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="@string/jueves"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/dia8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dia7"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="@string/viernes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/dia6"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dia8"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="@string/miercoles"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/dia10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dia9"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="@string/lunes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dia10"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="@string/martes"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/dia9"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_width="49dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80A0A91F"
+        android:gravity="center"
+        android:text="B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a6" />
+
+    <EditText
+        android:id="@+id/txt_codigo"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Num"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/dia7"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_lua"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_lua"
+        app:layout_constraintStart_toEndOf="@+id/a6"
+        app:layout_constraintTop_toBottomOf="@+id/dia9" />
+
+    <Button
+        android:id="@+id/BotonBuscar"
+        android:layout_width="57dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Buscar"
+        android:text="BUS"
+        app:layout_constraintStart_toEndOf="@+id/txt_via"
+        app:layout_constraintTop_toBottomOf="@+id/txt_codigo" />
+
+    <Button
+        android:id="@+id/BotonRegistrar"
+        android:layout_width="57dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Registrar"
+        android:text="REG"
+        app:layout_constraintStart_toEndOf="@+id/txt_vib"
+        app:layout_constraintTop_toBottomOf="@+id/BotonBuscar" />
+
+    <Button
+        android:id="@+id/BotonModificar"
+        android:layout_width="57dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="Modificar"
+        android:text="MOD"
+        app:layout_constraintStart_toEndOf="@+id/txt_vic"
+        app:layout_constraintTop_toBottomOf="@+id/BotonRegistrar" />
+
+    <Button
+        android:id="@+id/BotonEliminar"
+        android:layout_width="57dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="ELIM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/txt_vid"
+        app:layout_constraintTop_toBottomOf="@+id/BotonModificar" />
+
+    <EditText
+        android:id="@+id/txt_jue"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_jue"
+        app:layout_constraintStart_toEndOf="@+id/txt_mie"
+        app:layout_constraintTop_toBottomOf="@+id/txt_jud" />
+
+    <EditText
+        android:id="@+id/txt_jud"
+        android:layout_width="83dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:autofillHints=""
+        android:background="?attr/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Libre"
+        android:inputType="textPersonName"
+        android:text="@string/txt_jud"
+        app:layout_constraintStart_toEndOf="@+id/txt_mid"
+        app:layout_constraintTop_toBottomOf="@+id/txt_juc" />
+</android.support.constraint.ConstraintLayout>
