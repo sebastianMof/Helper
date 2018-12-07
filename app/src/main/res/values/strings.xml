@@ -118,4 +118,6 @@
     <string name="ver">Ver</string>
     <string name="contactos2">Contactos</string>
     <string name="home">Home</string>
+    <string name="a_adir_contacto">AÑADIR CONTACTO</string>
+    <string name="modificar">MODIFICAR</string>
 </resources>

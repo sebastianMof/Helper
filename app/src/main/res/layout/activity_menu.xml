@@ -12,34 +12,50 @@
         android:id="@+id/buttontrabajo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/trabajo"
+        android:layout_marginTop="76dp"
         android:backgroundTint="@color/color5"
+        android:text="@string/trabajo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/buttonestudio" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonestudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/estudio"
+        android:layout_marginTop="104dp"
         android:backgroundTint="@color/color5"
+        android:text="@string/estudio"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttontrabajo"
-        app:layout_constraintBottom_toTopOf="@+id/buttonperfil"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/buttontrabajo" />
 
     <Button
         android:id="@+id/buttonperfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/perfil"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="76dp"
         android:backgroundTint="@color/color5"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonestudio"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:text="@string/contactos"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonestudio" />
+
+    <Button
+        android:id="@+id/buttonperfil2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/color5"
+        android:text="Perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonestudio" />
 
 </android.support.constraint.ConstraintLayout>

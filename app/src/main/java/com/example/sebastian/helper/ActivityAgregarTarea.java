@@ -39,6 +39,7 @@ public class ActivityAgregarTarea extends AppCompatActivity {
         String id_proyectoNew = et_id_proyecto.getText().toString();
 
         ContentValues registro = new ContentValues();
+
         registro.put("nombre", nombreNew);
         registro.put("descripcion", descripcionNew);
         registro.put("fecha_inicio", fecha_inicioNew);

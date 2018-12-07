@@ -31,7 +31,14 @@ public class Perfilis extends AppCompatActivity {
         compania = (EditText)findViewById(R.id.Compania);
         celular = (EditText)findViewById(R.id.Celular);
         mail = (EditText)findViewById(R.id.Mail);
-        Cambiar();
+
+        nombre.setText("");
+        universidad.setText("");
+        compania.setText("");
+        mail.setText("");
+        celular.setText("");
+
+
         Consulta();
 
     }
@@ -41,26 +48,30 @@ public class Perfilis extends AppCompatActivity {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
 
-        ContentValues registro= new ContentValues();
+        String nombreNew = nombre.getText().toString();
+        String universidadNew = universidad.getText().toString();
+        String companiaNew = compania.getText().toString();
+        String celularNew = celular.getText().toString();
+        String mailNew = mail.getText().toString();
 
-        int cod = 2;
-        String name = "Demian Chocolito";
-        String uni = "Universidad Diego Portales";
-        String emp = "Sensei sugoi";
-        String cel = "+56 9 8765 4321";
-        String mal = "demian.chocolito@mail.udp.cl";
+        ContentValues registro = new ContentValues();
 
-        registro.put( "codigo", cod);
-        registro.put( "nombre", name);
-        registro.put( "universidad", uni);
-        registro.put( "compania", emp);
-        registro.put( "celular", cel);
-        registro.put( "mail", mal);
+        registro.put("nombre", nombreNew);
+        registro.put("universidad", universidadNew);
+        registro.put("compania", companiaNew);
+        registro.put("mail", mailNew);
+        registro.put("celular", celularNew);
 
         BaseDeDatos.insert("Perfil", null, registro);
         BaseDeDatos.close();
-        Toast.makeText(this, "Se agrego yay", Toast.LENGTH_SHORT).show();
 
+        nombre.setText("");
+        universidad.setText("");
+        compania.setText("");
+        mail.setText("");
+        celular.setText("");
+
+        Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
 
     }
 
@@ -82,15 +93,7 @@ public class Perfilis extends AppCompatActivity {
 
     }
 
-    public void Cambiar() {
-        Button nextButton = (Button)findViewById(R.id.botoncambiar);
-        nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Perfilis.this, ActivityContacto.class));
-            }
-        });
-    }
+
 
 
 

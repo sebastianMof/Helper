@@ -24,7 +24,9 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
         BaseDeDatos.execSQL("CREATE TABLE NOTA (id integer primary key, id_curso text, tipo text, calificacion real, FOREIGN KEY (id_curso) REFERENCES CURSO(id))");
         BaseDeDatos.execSQL("CREATE TABLE EVENTO (id integer primary key autoincrement, titulo text, fecha_inicio text, fecha_fin text, descripcion text)");
         BaseDeDatos.execSQL("CREATE TABLE FORO (id integer primary key autoincrement, ramo text, titulo text, descripcion text)");
-        BaseDeDatos.execSQL("CREATE TABLE Perfil (codigo integer primary key, nombre text, universidad text, compania text, celular text, mail text)");
+        BaseDeDatos.execSQL("CREATE TABLE PERFIL (id integer primary key, nombre text, universidad text, compania text, celular text, mail text)");
+        BaseDeDatos.execSQL("CREATE TABLE YO (id integer primary key, nombre text, universidad text, compania text, celular text, mail text)");
+        BaseDeDatos.execSQL("INSERT INTO YO (id,nombre, universidad, compania, celular, mail) VALUES (1,'','','','','')");
     }
 
     @Override

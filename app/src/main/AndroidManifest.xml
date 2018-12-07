@@ -16,31 +16,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            <activity android:name=".ActivityTrabajo" />
-            <activity android:name=".ActivityProyecto" />
-            <activity android:name=".ActivityTarea" />
-            <activity android:name=".ActivityReunion" />
-            <activity android:name=".ActivityAgregarReunion" />
-            <activity android:name=".ActivityAgregarProyecto" />
-            <activity android:name=".ActivityAgregarTarea" />
-            <activity android:name=".ActivityDespliegueProyecto" />
-            <activity android:name=".ActivityDespliegueTarea" />
-            <activity android:name=".ActivityDespliegueReunion" />
-            <activity android:name=".ActivityReunionesFiltradas" />
-            <activity android:name=".ActivityTareasFiltradas"/>
-            <activity android:name=".ActivityEstudio"/>
-            <activity android:name=".ActivityComunidad" />
-            <activity android:name=".ActivityHorario" />
-            <activity android:name=".ActivityEventoEstudio" />
-            <activity android:name=".ActivityAnadirEvento" />
-            <activity android:name=".ActivityEventoEstudioInfo" />
-            <activity android:name=".ActivityForo" />
-            <activity android:name=".ActivityAnadirForo" />
-            <activity android:name=".ActivityForoInfo" />
-            <activity android:name=".Perfilis"/>
-            <activity android:name=".ActivityContacto"/>
-
-
+        <activity android:name=".ActivityTrabajo" />
+        <activity android:name=".ActivityProyecto" />
+        <activity android:name=".ActivityTarea" />
+        <activity android:name=".ActivityReunion" />
+        <activity android:name=".ActivityAgregarReunion" />
+        <activity android:name=".ActivityAgregarProyecto" />
+        <activity android:name=".ActivityAgregarTarea" />
+        <activity android:name=".ActivityDespliegueProyecto" />
+        <activity android:name=".ActivityDespliegueTarea" />
+        <activity android:name=".ActivityDespliegueReunion" />
+        <activity android:name=".ActivityReunionesFiltradas" />
+        <activity android:name=".ActivityTareasFiltradas" />
+        <activity android:name=".ActivityEstudio" />
+        <activity android:name=".ActivityComunidad" />
+        <activity android:name=".ActivityHorario" />
+        <activity android:name=".ActivityEventoEstudio" />
+        <activity android:name=".ActivityAnadirEvento" />
+        <activity android:name=".ActivityEventoEstudioInfo" />
+        <activity android:name=".ActivityForo" />
+        <activity android:name=".ActivityAnadirForo" />
+        <activity android:name=".ActivityForoInfo" />
+        <activity android:name=".Perfilis" />
+        <activity android:name=".ActivityContacto" />
+        <activity android:name=".ActivityDespliegueContacto" />
+        <activity android:name=".ActivityPerfil" />
+        <activity android:name=".ActivityPerfilModificar"></activity>
     </application>
 
 </manifest>

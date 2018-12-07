@@ -1,5 +1,6 @@
 package com.example.sebastian.helper;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ public class ActivityMenu extends AppCompatActivity {
         configureNextButtonTrabajos();
         configureNextButtonEstudios();
         configureNextButtonPerfil();
+        configureNextButtonPerfil2();
 
     }
     private void configureNextButtonTrabajos() {
@@ -44,7 +46,18 @@ public class ActivityMenu extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityMenu.this, Perfilis.class));
+                startActivity(new Intent(ActivityMenu.this, ActivityContacto.class));
+            }
+        });
+    }
+
+    private void configureNextButtonPerfil2() {
+        Button nextButton = (Button)findViewById(R.id.buttonperfil2);
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ActivityMenu.this, ActivityPerfil.class));
             }
         });
     }

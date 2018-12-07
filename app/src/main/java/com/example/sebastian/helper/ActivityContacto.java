@@ -71,7 +71,7 @@ public class ActivityContacto extends AppCompatActivity {
         listaTitulo = new ArrayList<String>();
         //Registrar1();
 
-        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM Perfil ", null);
+        Cursor filatit = BaseDeDatos.rawQuery("SELECT nombre FROM PERFIL ", null);
         //Cursor filaini = BaseDeDatos.rawQuery("SELECT fecha_inicio FROM EVENTO ",null);
         //Cursor filafin = BaseDeDatos.rawQuery("SELECT fecha_fin FROM EVENTO ",null);
         //Cursor filadesc = BaseDeDatos.rawQuery("SELECT descripcion FROM EVENTO ",null);
@@ -90,7 +90,7 @@ public class ActivityContacto extends AppCompatActivity {
                 Object item = et_listViewEve.getItemAtPosition(position);
                 String name = item.toString();
 
-                Intent i = new Intent(ActivityContacto.this, Perfilis.class);
+                Intent i = new Intent(ActivityContacto.this, ActivityDespliegueContacto.class);
                 i.putExtra("dato", name);
                 startActivity(i);
             }
@@ -104,7 +104,7 @@ public class ActivityContacto extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent( ActivityContacto.this, ActivityEstudio.class));
+                startActivity(new Intent( ActivityContacto.this, Perfilis.class));
             }
         });
     }

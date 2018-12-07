@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityContacto">
+    tools:context=".ActivityContacto"
+    android:background="@drawable/sky">
 
     <ListView
         android:id="@+id/lista"
@@ -27,7 +28,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="148dp"
         android:layout_marginBottom="17dp"
-        android:text="@string/home"
+        android:text="@string/a_adir_contacto"
+        android:backgroundTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
