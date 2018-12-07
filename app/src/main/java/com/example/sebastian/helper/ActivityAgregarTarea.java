@@ -58,7 +58,7 @@ public class ActivityAgregarTarea extends AppCompatActivity {
 
         Intent anterior = new Intent(this, ActivityTarea.class);
         startActivity(anterior);
-
+        finish();
     }
 
 }

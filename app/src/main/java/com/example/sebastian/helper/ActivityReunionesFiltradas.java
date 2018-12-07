@@ -67,6 +67,7 @@ public class ActivityReunionesFiltradas extends AppCompatActivity {
                 Intent i = new Intent(ActivityReunionesFiltradas.this, ActivityDespliegueReunion.class);
                 i.putExtra("dato", name);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -81,6 +82,7 @@ public class ActivityReunionesFiltradas extends AppCompatActivity {
                 Intent i = new Intent(ActivityReunionesFiltradas.this, ActivityDespliegueProyecto.class);
                 i.putExtra("dato", dato);
                 startActivity(i);
+                finish();
             }
         });
     }

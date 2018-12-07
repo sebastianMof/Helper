@@ -70,6 +70,7 @@ public class ActivityDespliegueReunion extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ActivityDespliegueReunion.this, ActivityProyecto.class);
                 startActivity(i);
+                finish();
             }
         });
     }

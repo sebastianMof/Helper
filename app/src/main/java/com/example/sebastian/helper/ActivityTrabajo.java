@@ -26,6 +26,7 @@ public class ActivityTrabajo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityTrabajo.this, ActivityProyecto.class));
+
             }
         });
     }
@@ -36,6 +37,7 @@ public class ActivityTrabajo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityTrabajo.this, ActivityTarea.class));
+
             }
         });
     }
@@ -46,6 +48,7 @@ public class ActivityTrabajo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityTrabajo.this, ActivityReunion.class));
+
             }
         });
     }

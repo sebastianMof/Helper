@@ -69,6 +69,7 @@ public class ActivityReunion extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityReunion.this, ActivityAgregarReunion.class));
+                finish();
             }
         });
     }

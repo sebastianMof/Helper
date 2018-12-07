@@ -68,6 +68,7 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
                 Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueTarea.class);
                 i.putExtra("dato", name);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -82,6 +83,7 @@ public class ActivityTareasFiltradas extends AppCompatActivity {
                 Intent i = new Intent(ActivityTareasFiltradas.this, ActivityDespliegueProyecto.class);
                 i.putExtra("dato", dato);
                 startActivity(i);
+                finish();
             }
         });
     }

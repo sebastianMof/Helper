@@ -66,6 +66,7 @@ public class ActivityAgregarProyecto extends AppCompatActivity {
 
             Intent anterior = new Intent(this, ActivityProyecto.class);
             startActivity(anterior);
+            finish();
         } else {
             Toast.makeText(this, "Ya existe proyecto con ese nombre.", Toast.LENGTH_LONG).show();
         }

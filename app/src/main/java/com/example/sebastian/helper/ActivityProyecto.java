@@ -79,9 +79,11 @@ public class ActivityProyecto extends AppCompatActivity {
                 Intent i = new Intent(ActivityProyecto.this, ActivityDespliegueProyecto.class);
                 i.putExtra("dato", name);
                 startActivity(i);
+                finish();
             }
         });
 
 
     }
+
 }

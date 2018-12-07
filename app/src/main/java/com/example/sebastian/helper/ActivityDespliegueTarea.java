@@ -58,6 +58,7 @@ public class ActivityDespliegueTarea extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(ActivityDespliegueTarea.this, ActivityProyecto.class);
                 startActivity(i);
+                finish();
             }
         });
     }

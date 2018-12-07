@@ -64,6 +64,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityDespliegueProyecto.this, ActivityProyecto.class));
+                finish();
             }
         });
     }
@@ -78,6 +79,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
                 Intent i = new Intent(ActivityDespliegueProyecto.this, ActivityTareasFiltradas.class);
                 i.putExtra("dato", dato);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -92,6 +94,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
                 Intent i = new Intent(ActivityDespliegueProyecto.this, ActivityReunionesFiltradas.class);
                 i.putExtra("dato", dato);
                 startActivity(i);
+                finish();
 
             }
         });

@@ -67,7 +67,8 @@ public class ActivityTarea extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivityTarea.this, ActivityAgregarTarea.class));
+            startActivity(new Intent(ActivityTarea.this, ActivityAgregarTarea.class));
+            finish();
             }
         });
     }

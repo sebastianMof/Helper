@@ -65,6 +65,7 @@ public class ActivityAgregarReunion extends AppCompatActivity {
 
             Intent anterior = new Intent(this, ActivityReunion.class);
             startActivity(anterior);
+            finish();
         }else {
             Toast.makeText(this, "Error al agregar.", Toast.LENGTH_LONG).show();
         }
