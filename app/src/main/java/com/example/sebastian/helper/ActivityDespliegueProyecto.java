@@ -67,6 +67,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityDespliegueProyecto.this, ActivityProyecto.class));
+                finish();
             }
         });
     }
