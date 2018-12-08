@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -39,6 +41,7 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
         configureButtonIrATareasFiltradas(dato);
     }
 
+
     private void consultarProyecto(String dato) {
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
@@ -64,7 +67,6 @@ public class ActivityDespliegueProyecto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityDespliegueProyecto.this, ActivityProyecto.class));
-                finish();
             }
         });
     }

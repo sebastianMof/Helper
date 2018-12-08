@@ -40,6 +40,23 @@ public class ActivityProyecto extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.activity_proyecto);
+
+        et_listViewEve = (ListView)findViewById(R.id.listViewProyectos);
+
+        consultarLista();
+
+        configureNextButtonAgregarProyectos();
+
+        ArrayAdapter adaptador = new ArrayAdapter(this,android.R.layout.simple_list_item_2,android.R.id.text1,listaTitulo);
+        et_listViewEve.setAdapter(adaptador);
+
+        configureListViewClick(et_listViewEve);
+    }
+
     private void consultarLista() {
 
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
@@ -64,6 +81,7 @@ public class ActivityProyecto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ActivityProyecto.this, ActivityAgregarProyecto.class));
+
             }
         });
     }
