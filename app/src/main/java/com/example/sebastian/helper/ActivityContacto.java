@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,36 +33,25 @@ public class ActivityContacto extends AppCompatActivity {
         ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaTitulo);
         et_listViewEve.setAdapter(adaptador);
         configureListViewClick(et_listViewEve);
-        Cambiar2();
-        //Registrar1();
+
+        anadirC();
     }
 
-    public void Registrar1() {
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-        ContentValues registro = new ContentValues();
-
-        int cod = 1;
-        String name = "David Beltrami";
-        String uni = "Universidad Diego Portales";
-        String emp = "No tiene porque es flojito :c";
-        String cel = "+56 9 8411 2247";
-        String mal = "david.beltrami@mail.udp.cl";
-
-        registro.put("codigo", cod);
-        registro.put("nombre", name);
-        registro.put("universidad", uni);
-        registro.put("compania", emp);
-        registro.put("celular", cel);
-        registro.put("mail", mal);
-
-        BaseDeDatos.insert("Perfil", null, registro);
-        BaseDeDatos.close();
-        Toast.makeText(this, "Se agrego yay", Toast.LENGTH_SHORT).show();
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setContentView(R.layout.activitycontacto);
 
 
+        et_listViewEve = (ListView) findViewById(R.id.lista);
+        consultarLista();
+
+        ArrayAdapter adaptador = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listaTitulo);
+        et_listViewEve.setAdapter(adaptador);
+        configureListViewClick(et_listViewEve);
+
+        anadirC();
     }
-
 
     private void consultarLista() {
 
@@ -99,15 +89,18 @@ public class ActivityContacto extends AppCompatActivity {
 
     }
 
-    public void Cambiar2() {
-        Button nextButton = (Button)findViewById(R.id.home);
+    public void anadirC() {
+        Button nextButton = (Button)findViewById(R.id.anadirContacto);
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent( ActivityContacto.this, Perfilis.class));
+                onStop();
             }
         });
     }
+
+
 
 
 

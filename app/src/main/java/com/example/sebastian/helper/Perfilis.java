@@ -17,14 +17,13 @@ import com.example.sebastian.helper.AdminSQLiteOpenHelper;
 public class Perfilis extends AppCompatActivity {
 
     private EditText nombre, universidad, compania, celular, mail;
-    //private Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.perfilis);
 
-        String dato = getIntent().getStringExtra("dato");
+        //String dato = getIntent().getStringExtra("dato");
 
         nombre= (EditText)findViewById(R.id.Nombre);
         universidad = (EditText)findViewById(R.id.Universidad);
@@ -37,9 +36,6 @@ public class Perfilis extends AppCompatActivity {
         compania.setText("");
         mail.setText("");
         celular.setText("");
-
-
-        Consulta();
 
     }
 
@@ -74,26 +70,6 @@ public class Perfilis extends AppCompatActivity {
         Toast.makeText(this, "Registro exitoso", Toast.LENGTH_LONG).show();
 
     }
-
-    //metodo de consulta
-    public void Consulta(){
-        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null, 1);
-        SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
-
-        int codigo = 1;
-        Cursor fila = BaseDeDatos.rawQuery("select nombre, universidad, compania, celular, mail from Perfil where codigo =" + codigo, null);
-        if(fila.moveToFirst()) {
-            nombre.setText(fila.getString(0));
-            universidad.setText(fila.getString(1));
-            compania.setText(fila.getString(2));
-            celular.setText(fila.getString(3));
-            mail.setText(fila.getString(4));
-            BaseDeDatos.close();
-        }
-
-    }
-
-
 
 
 
